@@ -27,12 +27,16 @@ btn_inputCadastroEnviar.addEventListener("click", (e)=>{
     let Escolaridade = inputCadastroEscolaridade.value;
     let Endereco = inputCadastroEndereco.value;
 
+    //para confirmar a entrada dos dados.
     console.log(Nome)
     console.log(Celular)
     console.log(Email)
     console.log(DateNasc)
     console.log(Escolaridade)
     console.log(Endereco)
+
+    //para retornar o valor da matricula para o usuario. 
+    //alert()
 
 })
 
@@ -57,6 +61,7 @@ btn_inputDescarteEnviar.addEventListener("click", (e)=>{
     let DescarteType = inputDescarteType.value
     let Weight = inputDescarteWeight.value
 
+    //para confirmar a entrada dos dados.
     console.log(Matricula)
     console.log(DateToday)
     console.log(DescarteType)
