@@ -13,51 +13,57 @@
     </header>
 
     <main class="container">
-        <div class="divForm1">
+        <div class="divForm">
             <div class="text">Cadastre-se</div>
             <form action="#">
+
+                <div class="DivContainerTypes">
+                    <div class="DivTypeRes DivPapel">
+                        <input type="radio" id="PaperType" name="TypeRes" value="Papel"  required>
+                        <label for="PaperType">Papel</label>
+                    </div>
+                    <div class="DivTypeRes">
+                        <input type="radio" id="MetalType" name="TypeRes" value="Metal" hidden>
+                        <label for="MetalType">Metal</label>
+                    </div>
+                    <div class="DivTypeRes">
+                        <input type="radio" id="PlasticType" name="TypeRes" value="Plastico" hidden>
+                        <label for="PlasticType">Plastico</label>
+                    </div>
+                    <div class="DivTypeRes">
+                        <input type="radio" id="GlassType" name="TypeRes" value="Vidro" hidden>
+                        <label for="GlassType">Vidro</label>
+                    </div>
+                    <div class="DivTypeRes">
+                        <input type="radio" id="OrgType" name="TypeRes" value="Organico" hidden>
+                        <label for="OrgType">Organico</label>
+                    </div>
+                </div>
+
                 <div class="form-row">
                     <div class="input-data">
                         <input type="text" id="inputCadastroName" required autocomplete="off">
                         <div class="underline"></div>
                         <label for="inputCadastroName">Nome</label>
                     </div>
+                    <br>
                     <div class="input-data">
                         <input type="tel" id="inputCadastroCelular" required autocomplete="off">
                         <div class="underline"></div>
-                        <label for="inputCadastroCelular">Celular</label>
+                        <label for="inputCadastroCelular">Telefone</label>
                     </div>
+                    <br>
                 </div>
+
                 <div class="form-row">
-                    <div class="input-data">
-                        <input type="email" id="inputCadastroEmail" required autocomplete="off">
+                    <div class="input-data textarea">
+                        <textarea rows="8" cols="80" id="inputTextArea" required></textarea>
+                        <br/>
                         <div class="underline"></div>
-                        <label for="inputCadastroEmail">Email</label>
-                    </div>
-                    <div class="input-data">
-                        <input type="date" id="inputCadastroDateNasc" class="DateRemov" required min="1924-01-01" max="2024-01-01">
-                        <div class="underline"></div>
-                        <label for="inputCadastroDateNasc" class="LabelBorn">Data de Nascimento</label>
+                        <label for="">Quiz...Pergunta e explicação</label>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="input-data">
-                        <select name="nvEscolar" id="inputCadastroEscolaridade" >
-                            <option value="" disabled selected hidden>Escolaridade</option>
-                            <option value="Ensino Médio incompleto">Ensino Médio incompleto</option>
-                            <option value="Ensino Médio Completo">Ensino Médio Completo</option>
-                            <option value="Ensino Superior Incompleto">Ensino Superior Incompleto</option>
-                            <option value="Ensino Superior Completo">Ensino Superior Completo</option>
-                            <option value="Pós-graduação Incompleto">Pós-graduação Incompleto</option>
-                            <option value="Pós-graduação Completo">Pós-graduação Completo</option>
-                        </select>
-                    </div>
-                    <div class="input-data">
-                        <input type="text" id="inputCadastroEndereco" required autocomplete="off">
-                        <div class="underline"></div>
-                        <label for="inputCadastroEndereco">Endereço</label>
-                    </div>
-                </div>
+                
                 <div class="form-row submit-btn">
                     <div class="input-data">
                         <div class="inner"></div>
@@ -66,44 +72,7 @@
                 </div>
             </form>
         </div>
-        <div class="divForm2">
-            <div class="text">Descarte</div>
-            <form action="#">
-                <div class="form-row">
-                    <div class="input-data">
-                        <input type="text" id="inputDescarteMatricula" required autocomplete="off">
-                        <div class="underline"></div>
-                        <label for="inputDescarteMatricula">Matricula</label>
-                    </div>
-                    <div class="input-data">
-                        <input type="date" class="DateRemov" id="inputDescarteDateToday" required min="2024-01-01" max="2024-01-05" autocomplete="off">
-                        <div class="underline"></div>
-                        <label for="inputDescarteDateToday">Data de hoje</label>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="input-data">
-                        <select name="typeRes" id="inputDescarteType" id="typeRes">
-                            <option value="" disabled selected hidden>Tipo de Residuo</option>
-                            <option value="Plastico">Plástico</option>
-                            <option value="Papel">Papel</option>
-                            <option value="Metal">Metal</option>
-                            <option value="Vidro">Vidro</option>
-                        </select>
-                    </div>
-                    <div class="input-data">
-                        <input type="text" id="inputDescarteWeight" required autocomplete="off">
-                        <div class="underline"></div>
-                        <label for="inputDescarteWeight">Peso</label>
-                    </div>
-                </div>
-                <div class="form-row submit-btn">
-                    <div class="input-data">
-                        <div class="inner"></div>
-                        <input type="submit" id="btn_inputDescarteEnviar" value="Enviar">
-                    </div>
-                </div>
-            </form>
+        
     </main>            
     <footer class="footer">
         <p class="footerText">Residuum &copy; 2023</p>
