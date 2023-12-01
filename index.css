@@ -1,0 +1,186 @@
+@font-face {
+    font-family: "GothamBook";
+    src: url(assets/fontes/GothamBook.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 100vw;
+}
+
+.header {
+    width: 95%;
+    justify-self: center;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    max-width: 80%;
+    justify-self: center;
+    background-color: #fff;
+    padding: 25px 40px 10px 40px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.container .text{
+    text-align: center;
+    font-size: 41px;
+    font-weight: 600;
+    font-family: "GothamBook" sans-serif;
+    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container form {
+    padding-top: 30px;
+    margin-bottom: 10px;
+}
+
+.container form .form-row {
+    margin: 10px 0;
+}
+
+form .form-row .input-data {
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+
+/*linha divisoria entre os formularios*/
+.divForm1{
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+}
+
+.divform2{
+    border-top: 1px solid black;
+}
+
+.input-data {
+    margin-bottom: 2px;
+}
+
+.input-data input{
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid rgba(0,0,0, 0.12);
+}
+
+.input-data input:focus ~ label, .textarea textarea:focus ~ label,
+.input-data input:valid ~ label, .textarea textarea:valid ~ label{
+    transform: translateY(-30px);
+    font-size: 14px;
+    color: #3498db;
+}
+
+.input-data label{
+    position: absolute;
+    pointer-events: none;
+    bottom: 17px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/*esconder valores do input data*/
+.DateRemov{
+    opacity: 0;
+}
+
+.DateRemov:focus {
+    opacity: 1;
+}
+
+.submit-btn .input-data{
+    overflow: hidden;
+    height: 45px!important;
+    width: 25%!important;
+}
+
+.submit-btn .input-data .inner{
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -100%;
+    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+    transition: all 0.4s;
+}
+
+.submit-btn .input-data:hover .inner{
+    left: 0;
+}
+.submit-btn .input-data input{
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.footer {
+    width: 95%;
+    height: 100%;
+    justify-self: center;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    font-weight: bolder;
+}
+
+@media(min-width: 700px) {
+    .container{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    /*linha divisoria entre os formularios*/
+    .divForm1{
+        border-bottom: none;
+        border-right: 2px solid black;
+        padding-right: 10px;
+        align-self: center;
+    }
+
+    .divForm2{
+        padding-left: 10px;
+        align-self: center;
+    }
+    
+    .container .text{
+    font-size: 30px;
+    }
+    .container form{
+    padding: 10px 0 0 0;
+    }
+    .container form .form-row{
+    display: block;
+    }
+    form .form-row .input-data{
+    margin: 35px 0!important;
+    }
+    .submit-btn .input-data{
+    width: 40%!important;
+    }
+}
